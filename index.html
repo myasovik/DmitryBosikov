@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Dmitry Bosikov Portfolio : Software Engineer">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Dmitry Bosikov Portfolio</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/myasovik/DmitryBosikov">View on GitHub</a>
+
+          <h1 id="project_title">Dmitry Bosikov Portfolio</h1>
+          <h2 id="project_tagline">Software Engineer</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/myasovik/DmitryBosikov/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/myasovik/DmitryBosikov/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="gameplay" class="anchor" href="#gameplay" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gameplay</h3>
+
+<p>The game is based on game tic tac toe with new challenge. The challenge is to win as many rounds in a row as you can. In order to support such challenge, the game has artificial intelligence (AI) that learns to play. That gives effect of growing difficulty. The goal of a player is to analyse and create a strategy of the game to slow down learning of AI. It is simple to get 20-30 wins but all fun starts when your goal is to get 100, 200 wins when each move can be final.</p>
+
+<h3>
+<a id="mobile" class="anchor" href="#mobile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile</h3>
+
+<p>This game is live and available on Firefox marketplace. For installing it you need to have Firefox browser, then to open link: <a href="https://marketplace.firefox.com/app/xo-with-ai/">https://marketplace.firefox.com/app/xo-with-ai/</a> and follow prompts to install the game on your device.</p>
+
+<h3>
+<a id="tools" class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tools</h3>
+
+<p>Before creating and development this game, it was created the library MYASO for managing complicated, time consuming and error critical operations. The library and sample application are available for download. It includes artificial intelligence and graphics engine. A programmer can create new classes for objects, groups of objects and cameras with the library. Those classes are passed as parameters in WebGL management class that interacts with WebGL and refreshes scene. The library has class for artificial intelligence that accepts game status data, makes decision on the next move and learns from changes in game state.</p>
+
+<h3>
+<a id="artificial-intelligence" class="anchor" href="#artificial-intelligence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Artificial Intelligence</h3>
+
+<p>AI in the game works as hybrid of neural networks and Simulated Annealing algorithms. Execution consists of three steps. The 1st action sees game state and check it's memory if there are any good moves for the situation.If it has moves, it uses one with the best value that comes from learning. If there are none, it tries randomly to make a move. The 2nd action is learning that calculates fitness (how good move is) of AI move and move of a player. Then to subtract own value from a player and save a result value to the memory. The 3rd action is forgetting - after some period of time it starts moving values of moves to 0 and records with value 0 get removed. Particular for this game, forgetting is not a problem until you start moving from one dimension to multi-dimensional where space becomes a concern.</p>
+
+<h3>
+<a id="graphics" class="anchor" href="#graphics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graphics</h3>
+
+<p>Graphical part of the game starts from creating models in an app. After finishing, models save as JSON. Next files read using model class with group class and pass it to the game engine for rendering. The engine saves objects in its array and uses them for refreshing game scene. When game starts, the engine has only board in its array and displays it. After players and AI start make moves, new elements "X" and "O" are adding to array for rendering. At the end of the game, the buffer gets cleared.</p>
+
+<h3>
+<a id="web-front-end-and-ui" class="anchor" href="#web-front-end-and-ui" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web front end and UI</h3>
+
+<p>User interface consists of "div" elements that act like a window. Navigation between windows was done with active elements that make visible loading a window, perform all necessary operations for requested window and make it visible after preparation. In the game interaction happens through invisible active components that give imitation of interactions with 3D world. Game data are stored on a device with "localStorage" class. The body of the page configures with CSS to act like an application.</p>
+
+<h3>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h3>
+
+<p>Email: <a href="mailto:dmitry.bosikov.4@gmail.com">dmitry.bosikov.4@gmail.com</a><br>
+LinkedIn: <a href="https://www.linkedin.com/in/dbosikov">Dmitry Bosikov</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Dmitry Bosikov Portfolio maintained by <a href="https://github.com/myasovik">myasovik</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>

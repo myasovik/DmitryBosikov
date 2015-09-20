@@ -34,32 +34,32 @@
         <h3>
 <a id="gameplay" class="anchor" href="#gameplay" aria-hidden="true"><span class="octicon octicon-link"></span></a>XO with AI Gameplay</h3>
 
-<p>The game is based on game tic tac toe with new challenge. The challenge is to win as many rounds in a row as you can. In order to support such challenge, the game has artificial intelligence (AI) that learns to play. That gives effect of growing difficulty. The goal of a player is to analyse and create a strategy of the game to slow down learning of AI. It is simple to get 20-30 wins but all fun starts when your goal is to get 100, 200 wins when each move can be final.</p>
+<p>This game is based on the “tic tac toe” with a new challenge, which is to win as many rounds in a row as you can. The game has Artificial Intelligence (AI) which competes with the player and when he develop a new strategy, AI develops a counter strategy. That produce the effect of increasing difficulty. The goal of a player is to create a strategy to slow down learning of AI. It is not difficult to get 20-30 wins, but the fun starts when the player goal is to get 100.</p>
 
 <h3>
 <a id="mobile" class="anchor" href="#mobile" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mobile</h3>
 
-<p>This game is live and available on Firefox marketplace. For installing it you need to have Firefox browser, then to open link: <a href="https://marketplace.firefox.com/app/xo-with-ai/">https://marketplace.firefox.com/app/xo-with-ai/</a> and follow prompts to install the game on your device.</p>
+<p>This game is live and available on Firefox marketplace. For installing it, one needs to have a Firefox browser, then open the link: <a href="https://marketplace.firefox.com/app/xo-with-ai/">https://marketplace.firefox.com/app/xo-with-ai/</a> and follow the prompts to install the game on your device.</p>
 
 <h3>
 <a id="tools" class="anchor" href="#tools" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tools</h3>
 
-<p>Before creating and development this game, it was created the library MYASO for managing complicated, time consuming and error critical operations. The library and sample application are available for download. It includes artificial intelligence and graphics engine. A programmer can create new classes for objects, groups of objects and cameras with the library. Those classes are passed as parameters in WebGL management class that interacts with WebGL and refreshes scene. The library has class for artificial intelligence that accepts game status data, makes decision on the next move and learns from changes in game state.</p>
+<p>Before creating and developing this game, I created the library MYASO for managing complicated, time consuming and error critical operations. The library and sample application are available for downloading. It includes artificial intelligence and a graphics engine. With the library a programmer can create new classes for objects, groups of objects and cameras. Those classes are passed as parameters in WebGL management class that interacts with the WebGL and refreshes the scene. The library has a class for artificial intelligence that accepts the game status data, makes a decision on the next move and learns from the changes in the game state.</p>
 
 <h3>
 <a id="artificial-intelligence" class="anchor" href="#artificial-intelligence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Artificial Intelligence</h3>
 
-<p>AI in the game works as hybrid of neural networks and Simulated Annealing algorithms. Execution consists of three steps. The 1st action sees game state and check it's memory if there are any good moves for the situation.If it has moves, it uses one with the best value that comes from learning. If there are none, it tries randomly to make a move. The 2nd action is learning that calculates fitness (how good move is) of AI move and move of a player. Then to subtract own value from a player and save a result value to the memory. The 3rd action is forgetting - after some period of time it starts moving values of moves to 0 and records with value 0 get removed. Particular for this game, forgetting is not a problem until you start moving from one dimension to multi-dimensional where space becomes a concern.</p>
+<p>AI in the game works as a hybrid of neural networks and Simulated Annealing algorithms. Execution consists of three steps. The 1st action sees the game state and checks it's memory to determine there are any good moves for the situation. If there are, it uses the one with the best value that comes from learning. If there are none, it tries randomly to make a move. The 2nd action is learning that calculates the fitness (how good the move is) of the AI move and the move of the player. And save the result to the memory. The 3rd action is forgetting - after some period of time, it starts moving the values to zero and thous with zero value get removed. With to this game, forgetting is not a problem. It becomes more difficult with you start moving from one dimension to multidimensional space.</p>
 
 <h3>
 <a id="graphics" class="anchor" href="#graphics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graphics</h3>
 
-<p>Graphical part of the game starts from creating models in an app. After finishing, models save as JSON. Next files read using model class with group class and pass it to the game engine for rendering. The engine saves objects in its array and uses them for refreshing game scene. When game starts, the engine has only board in its array and displays it. After players and AI start make moves, new elements "X" and "O" are adding to array for rendering. At the end of the game, the buffer gets cleared.</p>
+<p>The graphical part of the game starts from creating models in an app. The models are stored as JSON. The program reads the  and pass it to the game engine for rendering. The engine saves objects in its array and uses them for refreshing the game scene. When the game starts, the engine has only the board in its array and displays it. After players and the AI start making moves, new elements "X" and "O" are adding to the array for rendering. At the end of the game, the buffer gets cleared.</p>
 
 <h3>
 <a id="web-front-end-and-ui" class="anchor" href="#web-front-end-and-ui" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web front end and UI</h3>
 
-<p>User interface consists of "div" elements that act like a window. Navigation between windows was done with active elements that make visible loading a window, perform all necessary operations for requested window and make it visible after preparation. In the game interaction happens through invisible active components that give imitation of interactions with 3D world. Game data are stored on a device with "localStorage" class. The body of the page configures with CSS to act like an application.</p>
+<p>User interface consists of "div" elements that act like a window. Navigation between windows is done with active elements that make the loading a window visible, perform all necessary operations for requested window and make it active after preparation. In the game, interaction happens through invisible active components that give imitation of the interactions with 3D world. The game data is stored on a device with a  "localStorage" class. The body of the page was configures with CSS to act like an application.</p>
 
 <h3>
 <a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h3>
